@@ -46,6 +46,8 @@ namespace ConAppLibrary
         }
         public static void DisplayAllBook()
         {
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine("Books List");
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 Console.WriteLine("BookId: " + ds.Tables[0].Rows[i]["BookId"]);
@@ -57,6 +59,8 @@ namespace ConAppLibrary
         }
         public static void AddNewBook()
         {
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine("Adding new Book to List");
             DataTable dt = ds.Tables[0];
             DataRow dr = dt.NewRow();
             con.Close();
@@ -78,6 +82,8 @@ namespace ConAppLibrary
         }
         public static void UpdateBook()
         {
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine("Updating a Book from List");
             DataTable dt = ds.Tables[0];
             con.Close();
             Console.WriteLine("Enter Id to Update Book: ");
